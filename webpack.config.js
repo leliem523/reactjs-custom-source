@@ -28,4 +28,8 @@ module.exports = {
       template: path.join(__dirname, "public", "index.html"),
     }),
   ],
+  devServer: {
+    port: '5000',
+    historyApiFallback: true,
+  },
 };
