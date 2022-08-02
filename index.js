@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Modules from "./src/modules";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const Contact = Modules.find((item) => item.key === "Contact").Component;
 
 root.render(
   <BrowserRouter>
