@@ -9,7 +9,7 @@ const Contact = Modules.find((item) => item.key === "Contact").Component;
 root.render(
   <BrowserRouter>
     <Routes>
-      {Modules.map((Module, index) => (
+      {Modules.map((Module) => (
         <Route key={Module.key} path={Module.path} element={<Module.Component />} />
       ))}
     </Routes>
