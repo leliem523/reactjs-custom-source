@@ -1,9 +1,8 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import HomeStore from '../modules/home/store'
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import HomeStore from "../modules/home/store";
 // src/app/store.js
-import createSagaMiddleware from 'redux-saga';
-import rootSaga from './saga';
-
+import createSagaMiddleware from "redux-saga";
+import rootSaga from "./saga";
 
 // disalbe thunk and add redux-saga middleware
 const sagaMiddleware = createSagaMiddleware();
@@ -13,7 +12,7 @@ export const store = configureStore({
   reducer: {
     ...HomeStore,
   },
-  middleware
-})
+  middleware,
+});
 
 sagaMiddleware.run(rootSaga);
